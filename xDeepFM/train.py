@@ -4,6 +4,8 @@
 # File   : train.py
 '''
 
+import sys
+sys.path.append('/Users/wangyuhan40/Recommend-System-tf2.0/xDeepFM')
 from model import xDeepFM
 from utils import create_criteo_dataset
 
@@ -13,7 +15,8 @@ from tensorflow.keras import losses, optimizers
 from sklearn.metrics import accuracy_score
 
 if __name__ == '__main__':
-    file = 'E:\\PycharmProjects\\推荐算法\\data\\train.txt'
+    #file = 'E:\\PycharmProjects\\推荐算法\\data\\train.txt'
+    file = '/Users/wangyuhan40/Recommend-System-tf2.0/Data/train.txt'
     test_size = 0.2
     hidden_units = [256, 128, 64]
     dropout = 0.3
